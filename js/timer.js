@@ -3,12 +3,12 @@ let timerInterval;
 let ms = document.getElementById('ms');
 let second = document.getElementById('second');
 let minute = document.getElementById('minute');
-let timerStart = document.getElementById('vpered');
-function sanovka() {
+let timerStart = document.getElementById('startTimer');
+function stopTimer() {
   clearInterval(timerInterval);
   }
 timerStart.addEventListener('click', function vpered() {
-  sanovka();
+  stopTimer();
   timerInterval = setInterval(function() {
   timer += 1/60;
   let msVal = Math.floor((timer - Math.floor(timer))*100);
@@ -20,8 +20,8 @@ timerStart.addEventListener('click', function vpered() {
   }, 1000/60);
 });
 
-let timerStop = document.getElementById('sanovka');
-timerStop.addEventListener('click', function sanovka() {
+let timerStop = document.getElementById('stopTimer');
+timerStop.addEventListener('click', function stopTimer() {
   clearInterval(timerInterval);
   });
 
