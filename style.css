@@ -1,0 +1,94 @@
+.tabs {
+  border: 1px solid #e0e0e0;
+}
+
+.tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  background: #fafafa;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabs__btn {
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.tabs__btn_active {
+  background: #e0e0e0;
+  cursor: default;
+}
+
+.tabs__btn:not(.tabs__btn_active):hover,
+.tabs__btn:not(.tabs__btn_active):focus {
+  background-color: #eee;
+}
+
+.tabs__content {
+  padding: 1rem;
+}
+
+.tabs__pane {
+  display: none;
+}
+
+.tabs__pane_show {
+  display: block;
+}
+#sekundomers {
+  width: 314px;
+  height: 86px;
+  margin: 100px auto;
+  background: #fbefef;
+  color: #2c2a2a;
+  border-radius: 10px;
+  padding: 60px 50px 100px;
+  text-align: center;
+  font-size: 28px;
+}
+
+#sekundomers span {
+  background: #40709f;
+  color: #ffeffb;
+  padding: 10px;
+  width: 60px;
+  border-radius: 3px;
+  margin: 5px;
+  display: inline-block;
+}
+.time {
+  margin-left: -25px;
+}
+#sekundomers span {
+  margin-left: 20px;
+}
+#sekundomers button:first-of-type {
+  margin-top: 15px;
+}
+#sekundomers button {
+  font-size: 22px;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #2e80b3;
+  color: white;
+  border-radius: 5px;
+  width: 140px;
+  height: 50px;
+  transition: 0.3s;
+}
+#sekundomers button:last-child {
+  background-color: #8538a1;
+}
+#sekundomers button:hover {
+  background: #2763cf;
+  color: #f1ecec;
+  cursor: pointer;
+}

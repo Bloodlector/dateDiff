@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="./js/timer.js"></script>
+  <script type="module" src="./js/timer2.js"></script>
+  <script type="module" src="./js/main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type = 'module' src="../node_modules/howler/dist/howler.js"></script>
+</head>
+<body>
+  
+  
+  <div class="tabs">
+    <div class="tabs__nav">
+      <button class="tabs__btn tabs__btn_active">Калькулятор дат</button>
+      <button class="tabs__btn">Секундомер</button>
+      <button class="tabs__btn">Таймер</button>
+      
+    </div>
+    <div class="tabs__content">
+      <div class="tabs__pane tabs__pane_show">
+        <form id="datecalc">
+          <h3>Калькулятор дат</h3>
+          <label>
+              <strong>Первая дата:</strong>
+              <input type="date" name="firstDate" />
+          </label>
+          <label>
+              <strong>Вторая дата:</strong>
+              <input type="date" name="secondDate" />
+          </label>
+          <button type="submit">Расчитать промежуток</button>
+          <p id="datecalc__result"></p>
+        </form> 
+      </div>
+      <div class="tabs__pane">
+        <div id="sekundomers">
+          <div class="time">
+            <span id="minute">00</span>
+            <span id="second">00</span>
+            <span id="ms">00</span>
+          </div>           
+          
+            <button id="vpered">Старт</button>
+            <button id="sanovka">Стоп</button>
+          </div>
+      </div>
+      <div class="tabs__pane">
+        <input type="text" name="time" id="time" placeholder="введите минуты">
+    <button id="button">Запустить</button>
+    <div id="timer"></div>
+    <script src="script.js"></script>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+
+  
+</body>
+</html>
+
+<!-- import { DateTime } from 'https://moment.github.io/luxon/es6/luxon.min.js'; -->
