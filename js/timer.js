@@ -7,7 +7,7 @@ let timerStart = document.getElementById('startTimer');
 function stopTimer() {
   clearInterval(timerInterval);
   }
-timerStart.addEventListener('click', function vpered() {
+timerStart.addEventListener('click', function startTimer() {
   stopTimer();
   timerInterval = setInterval(function() {
   timer += 1/60;
