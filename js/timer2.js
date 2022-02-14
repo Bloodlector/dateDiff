@@ -10,22 +10,22 @@ let timerInput = document.getElementById("time"); // Берём строку
 let buttonRun = document.getElementById("button");// Берём кнопку запуска
 let timerShow = document.getElementById("timer"); // Берём блок для показа времени
 
-var timeMinut = 60;
+let timeMinut = 60;
 buttonRun.addEventListener('click', function() {
 timeMinut = parseInt(timerInput.value) * 60;
 })
 
-var timer = setInterval(function () {
-    var seconds = timeMinut%60 // Получаем секунды
-    var minuts = timeMinut/60%60 // Получаем минуты
-    var hour = timeMinut/60/60%60 // Получаем часы
+let timer = setInterval(function () {
+    let seconds = timeMinut%60 // Получаем секунды
+    let minuts = timeMinut/60%60 // Получаем минуты
+    let hour = timeMinut/60/60%60 // Получаем часы
     // Условие если время закончилось то...
     if (timeMinut <= 0) {
         // Таймер удаляется
         clearInterval(timer);
         // Выводит сообщение что время закончилось
         alert("Время закончилось");
-                  sound.play();
+                //   sound.play();
         
     } else { // Иначе
         // Создаём строку с выводом времени

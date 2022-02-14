@@ -1,8 +1,8 @@
-var timer = 0;
-var timerInterval;
-var ms = document.getElementById('ms');
-var second = document.getElementById('second');
-var minute = document.getElementById('minute');
+let timer = 0;
+let timerInterval;
+let ms = document.getElementById('ms');
+let second = document.getElementById('second');
+let minute = document.getElementById('minute');
 let timerStart = document.getElementById('vpered');
 function sanovka() {
   clearInterval(timerInterval);
