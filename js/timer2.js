@@ -4,36 +4,41 @@
 // const sound = new Howl({
 //   src: '/js/sound.mp3'
 // });
+// import {Howl, Howler} from 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js'
+import play from './play.js'
 
-
+let timerShow = document.getElementById("timer"); // Берём блок для показа времени
 let timerInput = document.getElementById("time"); // Берём строку
 let buttonRun = document.getElementById("button");// Берём кнопку запуска
-let timerShow = document.getElementById("timer"); // Берём блок для показа времени
 
-let timeMinut = 60;
-buttonRun.addEventListener('click', function() {
-timeMinut = parseInt(timerInput.value) * 60;
-})
 
-let timer = setInterval(function () {
-    let seconds = timeMinut%60 // Получаем секунды
-    let minuts = timeMinut/60%60 // Получаем минуты
-    let hour = timeMinut/60/60%60 // Получаем часы
-    // Условие если время закончилось то...
+function timer(timeMinut) {
+    setInterval(function () {
+    let seconds = +timeMinut%60 // Получаем секунды
+    let minuts = +timeMinut/60%60 // Получаем минуты
+    let hour = +timeMinut/60/60%60 // Получаем часы
+    let audio = new Audio('/js/sound.mp3');
+
+    buttonRun.addEventListener('click', ()=> {
+        timeMinut = parseInt(timerInput.value) * 60;
+        
+        })
+        // Условие если время закончилось то...
     if (timeMinut <= 0) {
         // Таймер удаляется
-        clearInterval(timer);
+                audio.play();
+                clearInterval(timer);
         // Выводит сообщение что время закончилось
-        alert("Время закончилось");
-                //   sound.play();
-        
-    } else { // Иначе
+               console.log("Время закончилось");
+  } else { // Иначе
         // Создаём строку с выводом времени
         let strTimer = `${Math.trunc(hour)}:${Math.trunc(minuts)}:${seconds}`;
         // Выводим строку в блок для показа таймера
         timerShow.innerHTML = strTimer;
     }
     --timeMinut; // Уменьшаем таймер
+    return
 }, 1000)
+}
 
-// export * from "./timer2";
+export {timer};
