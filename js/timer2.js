@@ -5,7 +5,7 @@
 //   src: '/js/sound.mp3'
 // });
 // import {Howl, Howler} from 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js'
-import play from './play.js'
+// import play from './play.js'
 
 let timerShow = document.getElementById("timer"); // Берём блок для показа времени
 let timerInput = document.getElementById("time"); // Берём строку
